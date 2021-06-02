@@ -6,7 +6,9 @@ const Stories = ({ topStories }) => {
     return (
       <Article
         key={i}
-        abstract={story.abstract}
+        title={story.title}
+        img={story.image.url}
+        alt={story.image.caption}
       />
     )
   })

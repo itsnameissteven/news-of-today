@@ -8,7 +8,6 @@ const App = () => {
 
   useEffect(() => {
     getTopStories().then(data => setTopStories(cleanData(data)))
-    console.log('run')
   }, [])
 
   return (
