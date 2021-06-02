@@ -2,7 +2,7 @@ import React from 'react';
 
 const Article = ({ abstract }) => {
   return (
-    <article>
+    <article className="article">
       <h2>{abstract}</h2>
     </article>
   )
