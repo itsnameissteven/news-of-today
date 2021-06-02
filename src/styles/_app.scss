@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.header {
+  height: 75px;
+  border-bottom: 1px solid black;
+}
+
+.home-button {
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  font-size: 30px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
