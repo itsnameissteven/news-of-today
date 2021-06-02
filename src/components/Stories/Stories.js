@@ -7,11 +7,11 @@ const Stories = ({ topStories }) => {
       <Article
         key={i}
         title={story.title}
-        img={story.image.url}
-        alt={story.image.caption}
+        img={story.image?.url}
+        alt={story.image?.caption}
         byline={story.byline}
         publishedDate={story.publishedDate}
-        uri={story.uri.replace('nyt://', "")}
+        uri={story.uri}
       />
     )
   })
