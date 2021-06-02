@@ -6,6 +6,7 @@ export const cleanData = (data) => {
       title: result.title,
       abstract: result.abstract,
       url: result.url,
+      uri: result.uri,
       byline: result.byline,
       publishedDate: date,
       image: result.multimedia.find(media => media.format === 'superJumbo')

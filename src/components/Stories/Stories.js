@@ -11,6 +11,7 @@ const Stories = ({ topStories }) => {
         alt={story.image.caption}
         byline={story.byline}
         publishedDate={story.publishedDate}
+        uri={story.uri.replace('nyt://', "")}
       />
     )
   })
