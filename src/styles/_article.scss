@@ -8,7 +8,7 @@
   &:nth-child(6n - 4),
   &:nth-child(6n - 1),
   &:nth-child(6n) {
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background: red;
     grid-column: span 2;
@@ -26,5 +26,13 @@
   &__img {
     height: 250px;
     border-radius: 5px;
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid black;
   }
 }

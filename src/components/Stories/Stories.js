@@ -9,6 +9,8 @@ const Stories = ({ topStories }) => {
         title={story.title}
         img={story.image.url}
         alt={story.image.caption}
+        byline={story.byline}
+        publishedDate={story.publishedDate}
       />
     )
   })
