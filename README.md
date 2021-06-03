@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# News of Today
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [About the Project](#about-the-project)
+- [Installation](#installation)
+- [Functionality](#functionality)
+  - [Landing Page](#landing-page)
+  - [Detailed Article View](#detailed-article-view)
+  - [Accessibility](#accessibility)
+  - [Error Handling](#error-handling)
 
-In the project directory, you can run:
+## About the Project
 
-### `npm start`
+News of Today is a 6 hour take home challenge. Using the New York Times API a user is able to see top stories of the day, travel to a detailed page, sort by category and have the option to redirect to the full article on NYT.com. This project utilizes, JavaScript, React and React Router DOM. The entire app is fully accessible by keyboard.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Fork this repository.
+2. Clone it down to your local machine with `git clone <your SSH Key>`.
+3. Navigate into this directory with `cd news-of-today`.
+4. Run `npm install` to compile the React application.
+5. Run `npm start` to see the app running locally.
+6. Run `<your text editor> .` to see the code in your text editor.
 
-### `npm test`
+## Functionality
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Landing Page](#landing-page)
+- [Detailed Article View](#detailed-article-view)
+- [Accessibility](#accessibility)
+- [Error Handling](#error-handling)
 
-### `npm run build`
+#### Landing Page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- When a user visits the site they are able to view the top articles of the day posted by the New York times. Each article is a clickable link. Clicking on a link will redirect the user to a detailed view of the article.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Detailed Article View
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- After a user clicks on an article they are redirected to the detailed view page. Here a user can view an article abstract and click on a button to be redirected to the full article on an external website.
 
-### `npm run eject`
+#### Accessibility
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- I made accessiblity a priority when building this app. Users can tab through the entire app to view articles and use 'enter' to control their experience.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Error Handling
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+tbd
