@@ -19,9 +19,12 @@ News of Today is a 6 hour take home challenge. Using the New York Times API a us
 1. Fork this repository.
 2. Clone it down to your local machine with `git clone <your SSH Key>`.
 3. Navigate into this directory with `cd news-of-today`.
-4. Run `npm install` to compile the React application.
-5. Run `npm start` to see the app running locally.
-6. Run `<your text editor> .` to see the code in your text editor.
+4. Create an evironment file with `touch .env`.
+  * Travel to the [NYT API Website](https://developer.nytimes.com/docs/top-stories-product/1/overview) register an api key for `Top Stories`.
+  * In the `.env` file create a key/value `REACT_APP_KEY= your api key`.
+6. Run `npm install` to compile the React application.
+7. Run `npm start` to see the app running locally.
+8. Run `<your text editor> .` to see the code in your text editor.
 
 ## Functionality
 
