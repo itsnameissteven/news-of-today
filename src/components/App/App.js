@@ -46,6 +46,7 @@ const App = () => {
           className='hamburger' 
           onClick={() => setMenuIsOpen(!menuIsOpen)} 
           tabIndex='0'
+          role='button'
           onKeyDown={handleKeyDown}  
         />
       </header>
