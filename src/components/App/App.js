@@ -56,7 +56,7 @@ const App = () => {
         <Route exact path="/article/:id" render={({ match }) => {
           const story = topArticles.find(story => story.uri.includes(match.params.id));
           const storyBySection = sortedArticles.find(story => story.uri.includes(match.params.id));
-          return <DetailedArticle story={story ? story : storyBySection} />;
+          return <DetailedArticle story={!story ? storyBySection : story} />;
         }} />
         <Route exact path="/section/:section" render={({ match }) => {
           setTimeout(() => setSection(match.params.section), 0)
