@@ -30,13 +30,17 @@ const App = () => {
         <Route path="/" render={({match}) => {
           return (
             !match.isExact && 
-            <Link to="/">
-              <IoIosHome className="home-button" tabIndex='0'/>
-            </Link> 
+              <Link to="/">
+                <IoIosHome className="home-button" tabIndex='0'/>
+              </Link> 
           )
         }} />
         <h1>News of Today</h1>
-        <HiMenuAlt3 className='hamburger' onClick={() => setMenuIsOpen(!menuIsOpen)} tabIndex='0'/>
+        <HiMenuAlt3 
+          className='hamburger' 
+          onClick={() => setMenuIsOpen(!menuIsOpen)} 
+          tabIndex='0'  
+        />
       </header>
       {menuIsOpen && <Nav toggle={() => setMenuIsOpen(!menuIsOpen)} />}
       <Switch>
