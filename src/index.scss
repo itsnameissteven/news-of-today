@@ -1,5 +1,7 @@
 @import "./styles/normalize";
 @import "./styles/base";
-@import "./styles/app/";
-@import "./styles/article.scss";
-@import "./styles/stories";
+@import "./components/App/App";
+@import "./components/Article/Article";
+@import "./components/Stories/Stories";
+@import "./components/Nav/Nav";
+@import "./components/DetailedArticle/DetailedArticle";

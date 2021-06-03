@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Article from '../Article/Article';
 
-const Stories = ({ topStories }) => {
-  const articles = topStories.map((story, i) => {
+const Stories = ({ articles}) => {
+  const allArticles = articles.map((story, i) => {
     return (
       <Article
         key={i}
@@ -18,7 +18,7 @@ const Stories = ({ topStories }) => {
 
   return (
     <section className="stories">
-      {articles}
+      {allArticles}
     </section>
   )
 }
