@@ -24,14 +24,20 @@ const App = () => {
     section && getArticles(section).then(data => setSortedArticles(cleanData(data)));
   }, [section])
 
+  const handleKeyDown = (e) => {
+    if(e.key === 'Enter') {
+      setMenuIsOpen(!menuIsOpen);
+    }
+  }
+
   return (
     <div className="App">
       <header className="header">
         <Route path="/" render={({match}) => {
           return (
             !match.isExact && 
-              <Link to="/">
-                <IoIosHome className="home-button" tabIndex='0'/>
+              <Link to="/" role="button" tabIndex='0' className="home-button">
+                <IoIosHome  />
               </Link> 
           )
         }} />
@@ -39,7 +45,8 @@ const App = () => {
         <HiMenuAlt3 
           className='hamburger' 
           onClick={() => setMenuIsOpen(!menuIsOpen)} 
-          tabIndex='0'  
+          tabIndex='0'
+          onKeyDown={handleKeyDown}  
         />
       </header>
       {menuIsOpen && <Nav toggle={() => setMenuIsOpen(!menuIsOpen)} />}
