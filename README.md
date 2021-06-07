@@ -14,6 +14,11 @@
 
 News of Today is a 6 hour take home challenge. Using the New York Times API a user is able to see top stories of the day, travel to a detailed page, sort by category and have the option to redirect to the full article on NYT.com. This project utilizes, JavaScript, React and React Router DOM. The entire app is fully accessible by keyboard.
 
+  #### Inspirations and Planning
+  * [Grid / color inspiration](http://grid-masterclass.webflow.io/)
+  * [Wireframe and data structure](https://excalidraw.com/#room=28e72839859a859b02b3,XRNWUxTSg33IngLaQod-1A)
+  * [Project board](https://github.com/itsnameissteven/news-of-today/projects/1)
+
 ## Installation
 
 1. Fork this repository.
