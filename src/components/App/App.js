@@ -20,11 +20,17 @@ const App = () => {
       .then(data => setTopArticles(cleanData(data)))
       .catch(() => setError(true));
   }, []);
+
+  useEffect(() => {
+    if(window.location.pathname.includes('/section/')) {
+      setSection(window.location.pathname.replace('/section/', ''));
+    }
+  }, [])
   
   useEffect(() => {
-    // const path = window.location.path  Use this option if the setTimeout in route is a code smell
-    // if path.includes('/section') setSection with the key that follows
-    section && getArticles(section).then(data => setSortedArticles(cleanData(data)));
+    section && getArticles(section)
+      .then(data => setSortedArticles(cleanData(data)))
+      .catch(() => setError(true));
   }, [section])
 
   const handleKeyDown = (e) => {
@@ -63,7 +69,7 @@ const App = () => {
           return <DetailedArticle story={!story ? storyBySection : story} />;
         }} />
         <Route exact path="/section/:section" render={({ match }) => {
-          setTimeout(() => setSection(match.params.section), 0)
+          // setTimeout(() => setSection(match.params.section), 0)
           return !sortedArticles.length ? <h1>loading...</h1> : <Stories articles={sortedArticles}/>
         }} />
         <Route render={() => {
