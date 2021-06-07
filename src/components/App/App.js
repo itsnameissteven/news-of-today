@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getArticles } from '../../utilities/APICalls';
 import { cleanData } from '../../utilities/cleanData';
 import Stories from '../Stories/Stories';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route, Link, Redirect } from 'react-router-dom';
 import DetailedArticle from '../DetailedArticle/DetailedArticle';
 import { IoIosHome } from 'react-icons/io';
 import Nav from '../Nav/Nav'
@@ -13,9 +13,12 @@ const App = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [section, setSection] = useState('');
   const [sortedArticles, setSortedArticles] = useState([]);
+  const [error, setError] = useState(false)
 
   useEffect(() => {
-    getArticles().then(data => setTopArticles(cleanData(data)));
+    getArticles()
+      .then(data => setTopArticles(cleanData(data)))
+      .catch(() => setError(true));
   }, []);
   
   useEffect(() => {
@@ -51,6 +54,7 @@ const App = () => {
         />
       </header>
       {menuIsOpen && <Nav toggle={() => setMenuIsOpen(!menuIsOpen)} />}
+      {error && <Redirect to='/error' />}
       <Switch>
         <Route exact path="/" render={() => <Stories articles={topArticles} /> } />
         <Route exact path="/article/:id" render={({ match }) => {
@@ -61,6 +65,13 @@ const App = () => {
         <Route exact path="/section/:section" render={({ match }) => {
           setTimeout(() => setSection(match.params.section), 0)
           return !sortedArticles.length ? <h1>loading...</h1> : <Stories articles={sortedArticles}/>
+        }} />
+        <Route render={() => {
+          return (
+            <div className="error">
+              <h2>Sorry something went wrong, please try again</h2>
+            </div>
+          )
         }} />
       </Switch>
     </div>

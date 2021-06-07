@@ -25,6 +25,22 @@
   pointer-events: none;
 }
 
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  margin: 30px auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.error h2 {
+  margin-bottom: 50px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
